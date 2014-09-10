@@ -73,7 +73,6 @@ mainloop = DBusGMainLoop(set_as_default=True)
 
 LOG = logging.getLogger("uksc")
 
-
 class SoftwareCenter(QMainWindow):
 
     # recommend number in function "fill"
@@ -117,8 +116,8 @@ class SoftwareCenter(QMainWindow):
 
         # do not cover the launch loading div
         self.resize(0,0)
-
-        self.setWindowTitle("Ubuntu Kylin 软件中心")
+        title = _("Software Center")
+        self.setWindowTitle(title)
         self.setWindowFlags(Qt.FramelessWindowHint)
         # self.setAttribute(Qt.WA_TranslucentBackground, True)
 
@@ -232,6 +231,7 @@ class SoftwareCenter(QMainWindow):
         self.softCountText1 = QLabel(self.ui.homeMsgWidget)
         self.softCountText1.setGeometry(QRect(749, 14, 50, 15))
         self.softCountText1.setObjectName("softCountText1")
+        title = _("Software Center")
         self.softCountText1.setText("共有")
         self.softCount = QLabel(self.ui.homeMsgWidget)
         self.softCount.setGeometry(QRect(772, 14, 50, 15))
@@ -240,66 +240,84 @@ class SoftwareCenter(QMainWindow):
         self.softCountText2 = QLabel(self.ui.homeMsgWidget)
         self.softCountText2.setGeometry(QRect(818, 14, 44, 15))
         self.softCountText2.setObjectName("softCountText2")
+        title = _("Software Center")
         self.softCountText2.setText("款软件")
         self.softCount.setAlignment(Qt.AlignCenter)
-
+        title = _("Software Center")
         self.ui.btnLogin.setText("请登录")
+        title = _("Software Center")
         self.ui.btnReg.setText("免费注册")
+        title = _("Software Center")
         self.ui.welcometext.setText("欢迎您")
+        title = _("Software Center")
         self.ui.btnLogout.setText("退出")
-
+        
+        title = _("Software Center")
         self.ui.hometext1.setText("推荐软件")
+        title = _("Software Center")
         self.ui.hometext2.setText("评分排行")
-
+        
+        title = _("Software Center")
         self.ui.leSearch.setPlaceholderText("请输入您要搜索的软件")
 
 
         # style by qss
+        title = _("Software Center")
         self.ui.alltext1.setText("共有")
         self.ui.alltext1.setAlignment(Qt.AlignLeft)
         self.ui.alltext2.setAlignment(Qt.AlignLeft)
         self.ui.allcount.setAlignment(Qt.AlignCenter)
+        title = _("Software Center")
         self.ui.alltext2.setText("款软件")
         self.ui.allline.setStyleSheet("QLabel{background-color:#CCCCCC;}")
         self.ui.alltext1.setStyleSheet("QLabel{color:#666666;font-size:13px;}")
         self.ui.alltext2.setStyleSheet("QLabel{color:#666666;font-size:13px;}")
         self.ui.allcount.setStyleSheet("QLabel{color:#FA7053;font-size:14px;}")
-
+        
+        title = _("Software Center")
         self.ui.uptext1.setText("可升级")
         self.ui.uptext1.setAlignment(Qt.AlignLeft)
         self.ui.uptext2.setAlignment(Qt.AlignLeft)
         self.ui.upcount.setAlignment(Qt.AlignCenter)
+        title = _("Software Center")
         self.ui.uptext2.setText("款软件")
         self.ui.upline.setStyleSheet("QLabel{background-color:#CCCCCC;}")
         self.ui.uptext1.setStyleSheet("QLabel{color:#666666;font-size:13px;}")
         self.ui.uptext2.setStyleSheet("QLabel{color:#666666;font-size:13px;}")
         self.ui.upcount.setStyleSheet("QLabel{color:#FA7053;font-size:14px;}")
 
+        title = _("Software Center")
         self.ui.untext1.setText("已安装")
         self.ui.untext1.setAlignment(Qt.AlignLeft)
         self.ui.untext2.setAlignment(Qt.AlignLeft)
         self.ui.uncount.setAlignment(Qt.AlignCenter)
+        title = _("Software Center")
         self.ui.untext2.setText("款软件")
         self.ui.unline.setStyleSheet("QLabel{background-color:#CCCCCC;}")
         self.ui.untext1.setStyleSheet("QLabel{color:#666666;font-size:13px;}")
         self.ui.untext2.setStyleSheet("QLabel{color:#666666;font-size:13px;}")
         self.ui.uncount.setStyleSheet("QLabel{color:#FA7053;font-size:14px;}")
 
+        title = _("Software Center")
         self.ui.searchtext1.setText("搜索到")
         self.ui.searchtext1.setAlignment(Qt.AlignLeft)
         self.ui.searchtext2.setAlignment(Qt.AlignLeft)
         self.ui.searchcount.setAlignment(Qt.AlignCenter)
+        title = _("Software Center")
         self.ui.searchtext2.setText("款软件")
         self.ui.searchline.setStyleSheet("QLabel{background-color:#CCCCCC;}")
         self.ui.searchtext1.setStyleSheet("QLabel{color:#666666;font-size:13px;}")
         self.ui.searchtext2.setStyleSheet("QLabel{color:#666666;font-size:13px;}")
         self.ui.searchcount.setStyleSheet("QLabel{color:#FA7053;font-size:14px;}")
 
+        title = _("Software Center")
         self.ui.wintitle.setText("Windowns常用软件替换")
+        title = _("Software Center")
         self.ui.winlabel1.setText("可替换")
         self.ui.winlabel1.setAlignment(Qt.AlignLeft)
         self.ui.winlabel2.setAlignment(Qt.AlignLeft)
         self.ui.wincountlabel.setAlignment(Qt.AlignCenter)
+        title = _("Software Center")
         self.ui.winlabel2.setText("款软件")
         self.ui.winline.setStyleSheet("QLabel{background-color:#CCCCCC;}")
         self.ui.wintitle.setStyleSheet("QLabel{color:#777777;font-size:14px;}")
@@ -418,6 +436,7 @@ class SoftwareCenter(QMainWindow):
         # self.ui.leftWidget.hide()
 
         # loading
+        title = _("Software Center")
         self.launchLoadingDiv.start_loading("系统正在初始化...")
 
     def init_main_service(self):
@@ -1388,7 +1407,6 @@ def main():
     mw = SoftwareCenter()
 
     sys.exit(app.exec_())
-
 
 if __name__ == '__main__':
     main()
