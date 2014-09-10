@@ -27,6 +27,7 @@
 import dbus
 import dbus.service
 import webbrowser
+import gettext
 from PyQt4.QtGui import *
 from PyQt4.QtCore import *
 
@@ -72,6 +73,11 @@ from dbus.mainloop.glib import DBusGMainLoop
 mainloop = DBusGMainLoop(set_as_default=True)
 
 LOG = logging.getLogger("uksc")
+
+# get translations
+gettext.bindtextdomain('software-center', os.getcwd() + "/../locale")
+gettext.textdomain('software-center')
+_ = gettext.gettext
 
 class SoftwareCenter(QMainWindow):
 
