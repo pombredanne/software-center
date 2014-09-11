@@ -117,7 +117,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>软件介绍</string>
+    <string>Software</string>
    </property>
   </widget>
   <widget class="QTextEdit" name="summary">
@@ -184,12 +184,12 @@
     <rect>
      <x>25</x>
      <y>730</y>
-     <width>66</width>
-     <height>17</height>
+     <width>101</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="text">
-    <string>用户评论</string>
+    <string>User Reviews</string>
    </property>
   </widget>
   <widget class="QListWidget" name="reviewListWidget">
@@ -262,12 +262,12 @@
     <rect>
      <x>25</x>
      <y>600</y>
-     <width>66</width>
-     <height>17</height>
+     <width>121</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="text">
-    <string>软件评分</string>
+    <string>Software Ratings</string>
    </property>
   </widget>
   <widget class="QPushButton" name="btnUpdate">

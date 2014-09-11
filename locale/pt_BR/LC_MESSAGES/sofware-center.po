@@ -1,0 +1,88 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kcenter\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-06 10:27-0300\n"
+"PO-Revision-Date: 2014-09-06 10:34-0300\n"
+"Last-Translator: \n"
+"Language-Team: Kaiana Translators <kaiana@kaiana.com.br>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"Language: en\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: ubuntu-kylin-software-center.py:125 ubuntu-kylin-software-center.py:274
+#: ubuntu-kylin-software-center.py:279 ubuntu-kylin-software-center.py:286
+#: ubuntu-kylin-software-center.py:291 ubuntu-kylin-software-center.py:298
+#: ubuntu-kylin-software-center.py:303 ubuntu-kylin-software-center.py:310
+#: ubuntu-kylin-software-center.py:312 ubuntu-kylin-software-center.py:317
+msgid "Software Center"
+msgstr "Central de programas"
+
+#: ubuntu-kylin-software-center.py:240
+msgid "All"
+msgstr "Todos"
+
+#: ubuntu-kylin-software-center.py:249
+msgid "Software models"
+msgstr ""
+
+#: ubuntu-kylin-software-center.py:252
+msgid "Conect"
+msgstr "Conectar"
+
+#: ubuntu-kylin-software-center.py:253
+msgid "Sign up free"
+msgstr "Entrar"
+
+#: ubuntu-kylin-software-center.py:254
+msgid "Welcome"
+msgstr "Bem-Vindo"
+
+#: ubuntu-kylin-software-center.py:255
+msgid "Drop out"
+msgstr ""
+
+#: ubuntu-kylin-software-center.py:257
+msgid "Recommended Software"
+msgstr ""
+
+#: ubuntu-kylin-software-center.py:258
+msgid "Top Rated"
+msgstr "Melhores"
+
+#: ubuntu-kylin-software-center.py:260
+msgid "Please enter the software you want to search"
+msgstr ""
+
+#: ubuntu-kylin-software-center.py:264
+msgid "Total"
+msgstr ""
+
+#: ubuntu-kylin-software-center.py:268
+msgid "Models software"
+msgstr ""
+
+#: ubuntu-kylin-software-center.py:436
+msgid "The system is initialized ..."
+msgstr ""
+
+#: ubuntu-kylin-software-center.py:618
+#, python-format
+msgid "init models failed:%s"
+msgstr ""
+
+#: ubuntu-kylin-software-center.py:621
+msgid "init models successfully and ready to setup ui..."
+msgstr ""
+
+#: ubuntu-kylin-software-center.py:832
+msgid "Software Center has a new version, whether to upgrade？"
+msgstr ""

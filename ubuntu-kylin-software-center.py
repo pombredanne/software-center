@@ -75,7 +75,7 @@ mainloop = DBusGMainLoop(set_as_default=True)
 LOG = logging.getLogger("uksc")
 
 # get translations
-gettext.bindtextdomain('software-center', os.getcwd() + "/../locale")
+gettext.bindtextdomain('software-center', os.getcwd() + "locale")
 gettext.textdomain('software-center')
 _ = gettext.gettext
 
@@ -237,8 +237,8 @@ class SoftwareCenter(QMainWindow):
         self.softCountText1 = QLabel(self.ui.homeMsgWidget)
         self.softCountText1.setGeometry(QRect(749, 14, 50, 15))
         self.softCountText1.setObjectName("softCountText1")
-        title = _("Software Center")
-        self.softCountText1.setText("共有")
+        text1 = _("All")
+        self.softCountText1.setText(text1)
         self.softCount = QLabel(self.ui.homeMsgWidget)
         self.softCount.setGeometry(QRect(772, 14, 50, 15))
         self.softCount.setText("")
@@ -246,35 +246,26 @@ class SoftwareCenter(QMainWindow):
         self.softCountText2 = QLabel(self.ui.homeMsgWidget)
         self.softCountText2.setGeometry(QRect(818, 14, 44, 15))
         self.softCountText2.setObjectName("softCountText2")
-        title = _("Software Center")
-        self.softCountText2.setText("款软件")
+        text2 = _("Software models")
+        self.softCountText2.setText(text2)
         self.softCount.setAlignment(Qt.AlignCenter)
-        title = _("Software Center")
-        self.ui.btnLogin.setText("请登录")
-        title = _("Software Center")
-        self.ui.btnReg.setText("免费注册")
-        title = _("Software Center")
-        self.ui.welcometext.setText("欢迎您")
-        title = _("Software Center")
-        self.ui.btnLogout.setText("退出")
+        self.ui.btnLogin.setText("Conect")
+        self.ui.btnReg.setText("Sign up free")
+        self.ui.welcometext.setText("Welcome")
+        self.ui.btnLogout.setText("Drop out")
         
-        title = _("Software Center")
-        self.ui.hometext1.setText("推荐软件")
-        title = _("Software Center")
-        self.ui.hometext2.setText("评分排行")
+        self.ui.hometext1.setText("Recommended Software")
+        self.ui.hometext2.setText("Top Rated")
         
-        title = _("Software Center")
-        self.ui.leSearch.setPlaceholderText("请输入您要搜索的软件")
+        self.ui.leSearch.setPlaceholderText("Please enter the software you want to search")
 
 
         # style by qss
-        title = _("Software Center")
-        self.ui.alltext1.setText("共有")
+        self.ui.alltext1.setText("Total")
         self.ui.alltext1.setAlignment(Qt.AlignLeft)
         self.ui.alltext2.setAlignment(Qt.AlignLeft)
         self.ui.allcount.setAlignment(Qt.AlignCenter)
-        title = _("Software Center")
-        self.ui.alltext2.setText("款软件")
+        self.ui.alltext2.setText("Models software")
         self.ui.allline.setStyleSheet("QLabel{background-color:#CCCCCC;}")
         self.ui.alltext1.setStyleSheet("QLabel{color:#666666;font-size:13px;}")
         self.ui.alltext2.setStyleSheet("QLabel{color:#666666;font-size:13px;}")
@@ -442,8 +433,7 @@ class SoftwareCenter(QMainWindow):
         # self.ui.leftWidget.hide()
 
         # loading
-        title = _("Software Center")
-        self.launchLoadingDiv.start_loading("系统正在初始化...")
+        self.launchLoadingDiv.start_loading("The system is initialized ...")
 
     def init_main_service(self):
         self.appmgr = AppManager()
@@ -839,7 +829,7 @@ class SoftwareCenter(QMainWindow):
         self.uksc = self.appmgr.get_application_by_name("ubuntu-kylin-software-center")
         if(self.uksc != None):
             if(self.uksc.is_upgradable == True):
-                cd = ConfirmDialog("软件中心有新版本，是否升级？", self)
+                cd = ConfirmDialog("Software Center has a new version, whether to upgrade？", self)
                 self.connect(cd, SIGNAL("confirmdialogok"), self.update_uksc)
                 cd.exec_()
 
